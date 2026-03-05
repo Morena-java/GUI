@@ -4,25 +4,39 @@ import javax.swing.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        JLabel label = new JLabel();
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
-        JButton button = new JButton();
-        JPasswordField passwordField = new JPasswordField();
-
-
-        label.setVisible(true);
-        label.setBounds(20, 100, 200, 35);
-        label.setSize(25, 35);
-
-
+        frame.setSize(100,100);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        frame.setBounds(20, 100, 200, 30);
-        frame.setSize(20, 30);
+        frame.add(panel);
+        JLabel label = new JLabel("UserName");
+        panel.add(label);
 
-        panel.setSize(20, 30);
-        panel.setVisible(true);
+        JTextField userText = new JTextField(17);
+        userText.setBounds(100, 20, 165, 25);
+        panel.add(userText);
+        frame.setVisible(true);
 
+        JLabel passwordLabel = new JLabel("Password");
+        passwordLabel.setBounds(10, 50, 80, 25);
+        panel.add(passwordLabel);
+
+        JPasswordField passwordText = new JPasswordField(17);
+        passwordText.setBounds(100, 50, 165, 25);
+        frame.setVisible(true);
+        panel.add(passwordText);
+        frame.setVisible(true);
+
+        JButton button = new JButton("Login");
+        button.setBounds(10, 80, 80, 25);
+
+        panel.add(button);
+        frame.setVisible(true);
+        JLabel success = new JLabel("");
+        success.setBounds(10, 110, 300, 25);
+        panel.add(success);
+        
 
     }
 }
